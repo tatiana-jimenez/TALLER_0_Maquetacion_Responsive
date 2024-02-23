@@ -1,0 +1,112 @@
+@media screen and (max-width: 968px) {
+  .logo {
+    padding: 1rem;
+  }
+
+  .menuLi {
+    display: none;
+  }
+}
+@media screen and (min-width: 968px) {
+  .menu i {
+    display: none;
+  }
+}
+
+@import url(https://fonts.gstatic.com/s/marcellus/v13/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2);
+
+:root {
+  --azulclaro: #48d6ed;
+  --azuloscuro: #337ab7;
+  --azulnegro: #303342;
+  --negro: #333333;
+  --negro2: #000;
+  --gris: #b2b3b3;
+  --fondo: #fffefc;
+  --verdeazul: #157a8a;
+  --Magenta: #9c2759;
+  --blanco: #fff;
+  --degradado: linear-gradient(49.54deg, #337ab7 2.89%, #0b3860 80.34%);
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--negro2);
+  font-family: "Marcellus", serif;
+  font-size: 1.3em;
+  padding: 1rem;
+}
+
+.logo {
+  background-color: var(--negro2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.menu i {
+  color: var(--blanco);
+}
+
+.logo img {
+  width: 50%;
+  max-width: 500px;
+}
+
+.menu {
+  background-color: var(--negro2);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.item {
+  padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--blanco);
+}
+
+.navbar-button {
+  background-color: var(--azuloscuro);
+  padding: 0.5rem 1rem;
+  color: var(--blanco);
+  border-radius: 5px;
+  font-family: "Marcellus", serif;
+  font-size: 1em;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 15vh;
+}
+
+nav a:hover {
+  color: var(--azuloscuro);
+}
+
+.navbar-button:hover {
+  background-color: var(--azulclaro);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Marcellus", serif;
+}
