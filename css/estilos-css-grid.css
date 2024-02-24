@@ -1,0 +1,356 @@
+#container-grid {
+  display: grid;
+  grid-template:
+    "header" 100px
+    "navbar" 50px
+    "main" auto
+    "sidebar" 100px
+    "footer" 50px;
+  text-align: center;
+}
+/*Estilos Grid Items*/
+header {
+  grid-area: header;
+  background-color: blue;
+}
+nav {
+  grid-area: navbar;
+  background-color: yellow;
+}
+main {
+  grid-area: main;
+  background-color: blueviolet;
+}
+aside {
+  grid-area: sidebar;
+  background-color: green;
+}
+footer {
+  grid-area: footer;
+  background-color: red;
+}
+/*Resolución tabletas*/
+@media screen and (min-width: 768px) {
+  .container-grid {
+    grid-template-columns: 200px auto;
+    grid-template-rows: 100px 50px auto 50px;
+    grid-template-areas:
+      "header header"
+      "navbar navbar"
+      "sidebar main"
+      "footer footer";
+  }
+}
+/*Resolución resoluciones medias*/
+@media screen and (min-width: 1024px) {
+  #container-grid {
+    grid-template:
+      "header header header" 100px
+      "navbar main sidebar" auto
+      "footer footer footer" 50px /
+      200px auto 100px;
+  }
+}
+/*Resolución resoluciones macro*/
+@media screen and (min-width: 1308px) {
+  .container-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 968px) {
+  .logo {
+    padding: 1rem;
+  }
+
+  .menuLi {
+    display: none;
+  }
+}
+@media screen and (min-width: 968px) {
+  .menu i {
+    display: none;
+  }
+}
+
+@import url(https://fonts.gstatic.com/s/marcellus/v13/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2);
+
+:root {
+  --azulclaro: #48d6ed;
+  --azuloscuro: #337ab7;
+  --azulnegro: #303342;
+  --negro: #333333;
+  --negro2: #000;
+  --gris: #b2b3b3;
+  --fondo: #fffefc;
+  --verdeazul: #157a8a;
+  --Magenta: #9c2759;
+  --blanco: #fff;
+  --degradado: linear-gradient(49.54deg, #337ab7 2.89%, #0b3860 80.34%);
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--negro2);
+  font-family: "Marcellus", serif;
+  font-size: 1.3em;
+  padding: 1rem;
+}
+
+.logo {
+  background-color: var(--negro2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.menu i {
+  color: var(--blanco);
+}
+
+.logo img {
+  width: 50%;
+  max-width: 500px;
+}
+
+.menu {
+  background-color: var(--negro2);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.item {
+  padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--blanco);
+}
+
+.navbar-button {
+  background-color: var(--azuloscuro);
+  padding: 0.5rem 1rem;
+  color: var(--blanco);
+  border-radius: 5px;
+  font-family: "Marcellus", serif;
+  font-size: 1em;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 15vh;
+}
+
+nav a:hover {
+  color: var(--azuloscuro);
+}
+
+.navbar-button:hover {
+  background-color: var(--azulclaro);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Marcellus", serif;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--negro);
+  font-family: "Marcellus", serif;
+  font-size: 1.3em;
+  padding: 1rem;
+}
+.item {
+  padding: 1rem;
+}
+.menu a {
+  color: var(--blanco);
+  text-decoration: none;
+}
+.navbar-button {
+  background-color: var(--azuloscuro);
+  padding: 0.5rem 1rem;
+  color: var(--blanco);
+  border-radius: 5px;
+  font-family: "Marcellus", serif;
+  font-size: 1em;
+}
+.menu i {
+  margin-right: 0.5rem;
+}
+.logo img {
+  height: 3rem;
+}
+#features {
+  background: url(../img/index/bg-features.png);
+  color: white;
+  padding-top: 1rem;
+}
+.features-title {
+  background-color: rgba(0, 0, 0, 0.35);
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 1.5em;
+}
+.features-description {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.feature {
+  width: 25%;
+  min-width: 180px;
+  max-width: 230px;
+  margin: 0.8rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.feature i {
+  font-size: 2.2em;
+  margin-bottom: 1.5rem;
+}
+.feature-blue {
+  background-color: #00325eae;
+}
+.feature-black {
+  background-color: rgba(0, 0, 0, 0.59);
+}
+.logo {
+  background-color: var(--negro2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.logo img {
+  width: 40%;
+  max-width: 200px;
+}
+.logo i {
+  color: var(--blanco);
+  font-size: 2rem;
+}
+.menu {
+  background-color: rgba(1, 10, 52, 0.838);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.menu-hr {
+  width: 90%;
+  background-color: var(--blanco);
+}
+.item {
+  padding: 1rem;
+}
+nav a {
+  color: var(--blanco);
+  text-decoration: none;
+  text-align: center;
+}
+nav a:hover {
+  background-color: #0b3860;
+  width: 100%;
+}
+.navbar-button {
+  background-color: transparent;
+  border: none;
+  border-radius: 3px;
+  font-size: 1em;
+  padding: 0.5rem;
+  font-family: "Marcellus", serif;
+  color: var(--blanco);
+}
+/*Resolución tablet*/
+@media screen and (min-width: 768px) {
+}
+/*Resolución notebooks*/
+@media screen and (min-width: 1024px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    background-color: var(--negro2);
+  }
+  .logo {
+    padding: 1rem;
+  }
+  .logo img {
+    width: 100%;
+    max-width: 180px;
+  }
+  .logo i {
+    display: none;
+  }
+  .menu {
+    background-color: var(--negro2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .menu-hr {
+    display: none;
+  }
+  .navbar-button {
+    background-color: var(--azuloscuro);
+  }
+}
+/*Resolución notebooks*/
+@media screen and (min-width: 1308px) {
+}
+#container-grid {
+  display: grid;
+  grid-template:
+    "nav" auto
+    "banner" 400px
+    "descripcion" auto
+    "feature" auto
+    "ubicacion" auto
+    "opinion" auto
+    "footer" auto;
+}
+/*Resolución tabletas*/
+@media screen and (min-width: 768px) {
+}
+/*Resolución resoluciones medias*/
+@media screen and (min-width: 1024px) {
+}
+/*Resolución resoluciones macro*/
+@media screen and (min-width: 1308px) {
+  body {
+    background-color: #eaeaea;
+  }
+  #container-grid {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  nav {
+    width: 100%;
+    max-width: 1300px;
+  }
+}
